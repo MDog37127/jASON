@@ -25,7 +25,7 @@ public class Model {
     public static final List<GameCompany> modelList = new ArrayList<>();
 
     public void someThing(Activity ha) {
-        String url = ha.getString(R.string.URL);  // THAT should be in a strings.xml file!
+        String url = ha.getString(R.string.URLME);  // THAT should be in a strings.xml file!
 
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(ha);
@@ -45,8 +45,8 @@ public class Model {
                                 JSONObject company = jasonArray.getJSONObject(i);
 
                                 String name = company.getString("name");
-                                String year = String.valueOf(company.getInt("year"));
-                                String console = company.getString("recentConsole");
+                                String year = company.getString("main");
+                                String console = company.getString("description");
 
                                 GameCompany gameCompany = new GameCompany(name, year, console);
 
