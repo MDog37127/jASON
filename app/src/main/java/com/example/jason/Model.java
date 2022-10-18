@@ -37,7 +37,7 @@ public class Model {
                     public void onResponse(JSONObject response) {
                         try {
                             JSONObject object = response.getJSONObject("record");
-                            JSONArray jasonArray = object.getJSONArray("gameCompanies");
+                            JSONArray jasonArray = object.getJSONArray("users");
 
                             modelList.clear();
                             modelMap.clear();
